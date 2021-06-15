@@ -318,7 +318,7 @@ class Seqgan(Gan):
         tei = TEI()
         self.add_metric(tei)
         
-        ppl = PPL(self.generator_file, self.oracle_File)
+        ppl = PPL(self.generator_file, self.oracle_file)
         # eval_samples = [self.generator.sample(self.sequence_length * self.batch_size, self.batch_size, label_i=i)
         #                 for i in range(2)]
         eval_samples=self.generator.sample(self.sequence_length, self.batch_size, label_i=1)
